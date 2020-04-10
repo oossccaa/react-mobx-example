@@ -1,0 +1,19 @@
+$pc-width: 960
+$pad-width: 768
+$mphone-width: 576
+$sphone-width: 320
+
+=rwd-pad($max-width: $pad-width)
+  @media screen and (max-width: $max-width + px)
+    @content
+=rwd-md($min-width: $pad-width + 1)
+  @media screen and (min-width: $min-width + px)
+    @content
+=rwd-sm($min-width: $mphone-width + 1, $max-width: $pad-width)
+  @media screen and (min-width: $min-width + px) and (max-width: $max-width + px)
+    @content
+
+.App
+  width: 414px
+  height: 736px
+  background: #f0f0f0
